@@ -37,7 +37,7 @@ const props = defineProps({
   },
   backgroundImage: {
     type: String,
-    default: "/src/assets/img/preview-glav.jpg",
+    default: "/src/assets/img/preview-glav.JPG",
   },
   buttons: { type: Array, default: () => [] },
 });

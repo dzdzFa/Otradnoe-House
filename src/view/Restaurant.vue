@@ -56,7 +56,7 @@
             </div>
           </div>
           <div class="hall-card">
-            <img src="/src/assets/img/summer_ter.jpg" alt="Летняя терраса" />
+            <img src="/src/assets/img/summer_ter.JPG" alt="Летняя терраса" />
             <div class="hall-content">
               <h3>Летняя терраса</h3>
               <p>Открытая веранда с видом на сад, романтическая атмосфера</p>
@@ -374,7 +374,7 @@ onMounted(() => {
 .hero-background {
   position: absolute;
   inset: 0;
-  background-image: url("/src/assets/img/hero_rest.jpg");
+  background-image: url("/src/assets/img/hero_rest.JPG");
   background-size: cover;
   background-position: center;
   opacity: 0.6;

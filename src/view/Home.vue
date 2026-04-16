@@ -406,10 +406,10 @@ const galleryFilters = [
 ];
 const activeFilter = ref("Все");
 const galleryImages = [
-  { url: "/src/assets/img/stand_num.jpg", category: "Номера" },
-  { url: "/src/assets/img/ter2.jpg", category: "Территория" },
-  { url: "/src/assets/img/lavanda-preview.jpg", category: "Ресторан" },
-  { url: "/src/assets/img/bass2.jpg", category: "Бассейн" },
+  { url: "/src/assets/img/stand_num.JPG", category: "Номера" },
+  { url: "/src/assets/img/ter2.JPG", category: "Территория" },
+  { url: "/src/assets/img/lavanda-preview.JPG", category: "Ресторан" },
+  { url: "/src/assets/img/bass2.JPG", category: "Бассейн" },
   { url: "/src/assets/img/transf.jpg", category: "Трансфер" },
 ];
 
@@ -421,7 +421,7 @@ const filteredImages = computed(() => {
 const checkIn = ref("");
 const checkOut = ref("");
 const guests = ref("2");
-const roomType = ref("standard"); 
+const roomType = ref("standard");
 const showTransferModal = ref(false);
 
 const minDate = computed(() => new Date().toISOString().split("T")[0]);
@@ -455,7 +455,7 @@ onMounted(() => {
   justify-content: center;
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/src/assets/img/preview-glav.jpg") center/cover;
+    url("/src/assets/img/preview-glav.JPG") center/cover;
   color: white;
   text-align: center;
 }

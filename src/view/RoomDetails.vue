@@ -217,10 +217,10 @@ const { success, info } = useNotification();
 
 const room = ref(null);
 const roomImages = ref([
-  "/src/assets/img/stand_num.jpg",
-  "/src/assets/img/stand_num.jpg",
-  "/src/assets/img/bashroom1.jpg",
-  "/src/assets/img/bashroom.jpg",
+  "/src/assets/img/stand_num.JPG",
+  "/src/assets/img/stand_num.JPG",
+  "/src/assets/img/bashroom1.JPG",
+  "/src/assets/img/bashroom.JPG",
 ]);
 
 const activeImage = ref(0);
