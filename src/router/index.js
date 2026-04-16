@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import { useAuth } from "../composables/useAuth";
 
 import HomeView from "../view/Home.vue";
@@ -78,7 +78,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior(to, savedPosition) {
     if (to.hash) return { el: to.hash, behavior: "smooth" };
