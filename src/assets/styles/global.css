@@ -1,0 +1,267 @@
+/* Глобальный сброс и базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Элегантная палитра */
+  --color-sand: #e5ddd5;
+  --color-cream: #faf6f1;
+  --color-seafoam: #8aa7a5;
+  --color-lavender: #b5a7c2;
+  --color-coral: #d9a9a6;
+  --color-sage: #7f8f7f;
+  --color-text-dark: #2b2b2b;
+  --color-text-light: #5b5b5b;
+  --color-border: #d4cbc2;
+  --color-white: #ffffff;
+
+  /* Тени и радиусы */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.06);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  background: var(--color-cream);
+  scroll-behavior: smooth;
+  font-weight: 400;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Все элементы используют Roboto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+input,
+select,
+textarea,
+span,
+div {
+  font-family:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+/* Заголовки */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+h1 {
+  font-size: 4.5rem;
+  font-weight: 300;
+}
+h2 {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+h5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-light);
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  border-bottom-color: var(--color-seafoam);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  transition: var(--transition);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+.section {
+  padding: 7rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  font-size: 4rem;
+  font-weight: 300;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--color-seafoam);
+  margin: 2rem auto 0;
+}
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  color: var(--color-text-light);
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Адаптив */
+@media (max-width: 1200px) {
+  html {
+    font-size: 17px;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
+  .container {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  .section {
+    padding: 5rem 0;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
